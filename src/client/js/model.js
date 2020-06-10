@@ -1,0 +1,52 @@
+/*--------------------------------------------------------
+Model code for the App. UDACITY Project - Front End Developper Nanodegree
+version: 0.0.1
+created on: 07/06/20
+last modified: 07/06/20
+Updates:
+07/06/20    File Creation
+07/06/20    getData function
+author: E. RONDON
+----------------------------------------------------------*/
+
+
+/**
+* @description helper function to use fetch to realize a GET request
+* @param {String} url - The url to realiaze the GET request.
+*/
+async function getData(url = '') {
+    const response = await fetch(url);
+    try{
+        return response.json();
+    }catch(error){
+        console.log("error",error);
+        return {};
+    }
+
+}
+
+/**
+* @description helper function to use fetch to realize a POST request
+* @param {String} url - The url to realiaze the POST request.
+* @param {Object} data - The data to send ans body of the POST request
+*/
+async function postData(url = '',data= {}) {
+    const response = await fetch(url, {
+        method: 'POST', 
+        credentials: 'same-origin',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data), 
+      });
+  
+    try {
+        const newData = await response.json();
+        return newData;
+    }catch(error) {
+        console.log("error", error);
+    }
+}
+
+export {getData,
+postData}

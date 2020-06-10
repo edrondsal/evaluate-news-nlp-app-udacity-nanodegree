@@ -1,0 +1,47 @@
+{
+    "name": "evaluatewews",
+    "version": "0.0.1",
+    "main": "index.js",
+    "scripts": {
+        "start": "node src/server/index.js",
+        "build-dev-server": "webpack-dev-server  --config webpack.devserver.js --open",
+        "build-dev": "webpack  --config webpack.dev.js",
+        "build-prod": "webpack --config webpack.prod.js",
+        "unit-test": "jest"
+    },
+    "author": "E. RONDON",
+    "license": "MIT",
+    "description": "Nanodegree Project: Evaluate News NLP",
+    "dependencies": {
+        "aylien_textapi": "^0.7.0",
+        "body-parser": "^1.19.0",
+        "cors": "^2.8.5",
+        "dotenv": "^8.2.0",
+        "express": "^4.17.1",
+        "webpack": "^4.43.0",
+        "webpack-cli": "^3.3.11"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.10.2",
+        "@babel/preset-env": "^7.10.2",
+        "babel-jest": "^26.0.1",
+        "babel-loader": "^8.1.0",
+        "clean-webpack-plugin": "^3.0.0",
+        "css-loader": "^3.5.3",
+        "html-webpack-plugin": "^4.3.0",
+        "jest": "^26.0.1",
+        "mini-css-extract-plugin": "^0.9.0",
+        "optimize-css-assets-webpack-plugin": "^5.0.3",
+        "regenerator-runtime": "^0.13.5",
+        "sass": "^1.26.8",
+        "sass-loader": "^8.0.2",
+        "style-loader": "^1.2.1",
+        "terser-webpack-plugin": "^3.0.3",
+        "webpack-bundle-analyzer": "^3.8.0",
+        "webpack-dev-server": "^3.11.0",
+        "workbox-webpack-plugin": "^5.1.3"
+    },
+    "jest": {
+        "rootDir": "src/client"
+    }
+}

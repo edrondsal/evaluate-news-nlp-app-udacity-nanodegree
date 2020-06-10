@@ -1,0 +1,55 @@
+/*--------------------------------------------------------
+Style Sheet for Form component. UDACITY Project - Front End Developper Nanodegree
+version: 0.0.1
+last modified: 07/06/2020
+author: E. RONDON
+----------------------------------------------------------*/
+@use 'base';
+
+.input-flex-container{
+    width: auto;
+    height: 100%;
+    max-width: 1200px;
+    margin: 10px auto;
+    padding: 10px 10px;
+    box-shadow: 2px 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: base.$principal-color;
+}
+
+.input-title{
+    width: 100%;
+    margin: 3px 0 10px 0;
+    border-bottom: 3px solid base.$accentuation-dark-color;
+    padding: 0 0 3px 0;
+}
+.input-label{
+    padding: 5px 0;
+}
+.input-text{
+    width: 60%;
+    padding: 5px 5px;  
+    border-radius: 5px;
+    resize: none;
+}
+.input-button{
+    color: base.$principal-color;
+    background-color: base.$accentuation-color;
+    border-radius: 5px;
+    font-weight: 600;
+    padding: 10px 10px;
+    margin: 5px 5px;
+    align-self: flex-end;
+    border: none;
+    cursor: pointer;
+    transition: color 0.4s ease-in-out;
+    box-shadow: 1px 2px 4px 0 rgba(0,0,0,0.2);
+}
+.input-button:active{
+    background-color: base.$accentuation-dark-color;
+    box-shadow: 1px 1px 2px 0 rgba(0,0,0,0.2);
+}

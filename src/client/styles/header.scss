@@ -1,0 +1,103 @@
+/*--------------------------------------------------------
+Style Sheet for Header component. UDACITY Project - Front End Developper Nanodegree
+version: 0.0.1
+last modified: 04/06/2020
+author: E. RONDON
+----------------------------------------------------------*/
+@use 'base';
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@700&display=swap');
+
+
+
+.header-section-style{
+    background-color: white;
+    box-shadow: 0 3px 4px 0px rgba(0,0,0,0.2);
+    z-index: 100;
+    font-family: 'Balsamiq Sans', cursive;
+    color: #757575;
+}
+
+header{
+    h1{
+        color: base.$accentuation-color;
+    }
+}
+
+nav {
+
+    width: auto;
+    min-width: 600px;
+    max-width: 960px;
+    margin: 0 auto;
+
+    ul {
+        font-family: 'Balsamiq Sans', cursive;
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: space-around;
+        color: base.$secondary-color;
+
+    }
+  
+    li { 
+        flex: 1;
+    }
+  
+}
+
+.navbar-item-style {
+    color: base.$secondary-color;
+    &:visited{
+        color: base.$secondary-color;
+    }
+    &:hover{
+        color: base.$secondary-color;
+    }
+}
+
+.navbar-item-style-active {
+    color: base.$accentuation-color;
+    &:visited{
+        color: base.$accentuation-color;
+    }
+    &:hover{
+        color:base.$accentuation-color;
+    }
+}
+
+/*devices with width inferior or equal to 600px*/
+@media(max-width:600px){
+    nav {
+
+        width: 100%;
+        margin: 0 0;
+        min-width: 100%;
+    
+        ul {
+            flex-flow: column wrap;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        li {
+            flex: 1 0 100%;
+            margin: 10px 0;
+        }
+    }
+}
+
+/*devices with width between 601px and 900px*/
+@media(min-width:601px) and (max-width:900px){
+    nav {
+
+        width: auto;
+        min-width: 500px;
+        max-width: 960px;
+        margin: 0 auto;
+    
+        ul {
+            margin: 10px 0;
+        }
+    }
+}

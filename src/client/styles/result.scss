@@ -1,0 +1,35 @@
+/*--------------------------------------------------------
+Style Sheet for Result component. UDACITY Project - Front End Developper Nanodegree
+version: 0.0.1
+last modified: 07/06/2020
+author: E. RONDON
+----------------------------------------------------------*/
+@use 'base';
+
+.result-flex-container{
+    width: auto;
+    height: 100%;
+    max-width: 1200px;
+    margin: 10px auto;
+    padding: 10px 10px;
+    box-shadow: 2px 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: base.$principal-color;
+}
+
+.result-title{
+    width: 100%;
+    margin: 3px 0 10px 0;
+    border-bottom: 3px solid base.$accentuation-dark-color;
+    padding: 0 0 3px 0;
+}
+
+.result-paragraph{
+    width: 100%;
+    margin: 3px 0;
+    padding: 5px 5px;
+}

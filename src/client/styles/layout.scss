@@ -1,0 +1,96 @@
+/*--------------------------------------------------------
+Style Sheet for layout of the app. UDACITY Project - Front End Developper Nanodegree
+version: 0.0.1
+last modified: 07/06/2020
+author: E. RONDON
+----------------------------------------------------------*/
+
+/*main container with the grid layout of the app*/
+.grid-container{
+    width: auto;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 80px auto auto 50px;
+    grid-template-areas:
+    "hder"
+    "input"
+    "result"
+    "footer";
+}
+
+/*style and layout of the header section*/
+.header-section-layout{
+    grid-area: hder;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+}
+/*layout and style footer section*/
+.footer-section-layout{
+    grid-area: footer;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 8px;
+}
+/*layout and style of input*/
+.input-section-layout{
+    grid-area: input;
+    padding:10px 1%;
+}
+/*layout and style of container*/
+.result-section-layout{
+    grid-area: result;
+    padding: 5px 1%;
+    min-height: 500px;
+}
+
+/*layout for devices with width inferior or equal to 600px*/
+@media(max-width:600px){
+    .grid-container{
+        width: 100%;
+        margin: 0 0;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto auto 50px;
+    } 
+    .header-section-layout{
+        grid-area: hder;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 15px;
+    }
+    .footer-section-layout{
+        grid-area: footer;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 8px 8px;
+    }
+}
+
+/*layour for devices with width between 601px and 900px*/
+@media(min-width:601px) and (max-width:900px){
+    .grid-container{
+        width: 100%;
+        margin: 0 0;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto auto 50px;
+    } 
+    .header-section-layout{
+        grid-area: hder;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+    }
+}
