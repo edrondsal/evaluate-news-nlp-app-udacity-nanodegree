@@ -1,10 +1,11 @@
 <!--
 Index HTML file for Evaluate News NLP. UDACITY Project - Front End Developper Nanodegree
-version: 0.0.1
+version: 1.0.0
 created on: 04/06/20
-last modified: 04/06/20
+last modified: 11/06/20
 Updates:
 04/06/20    File Creation
+11/06/20    ServiceWorker registration after code review
 author: E. RONDON
 -->
 <!doctype html>
@@ -47,5 +48,14 @@ author: E. RONDON
                 <p>© 2020 Copyright: Eduardo Rondon</p>
             </footer>   
         </div>
+        <script>
+            // Check that service workers are supported
+            if ('serviceWorker' in navigator) {
+                // Use the window load event to keep the page load performant
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('/service-worker.js');
+                });
+            }
+        </script>
     </body>
 </html>

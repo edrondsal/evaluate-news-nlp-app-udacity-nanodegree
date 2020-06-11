@@ -1,6 +1,6 @@
 /*--------------------------------------------------------
 Unit Test for the View Controller code for the App. UDACITY Project - Front End Developper Nanodegree
-version: 0.0.1
+version: 1.0.0
 created on: 09/06/20
 last modified: 09/06/20
 Updates:

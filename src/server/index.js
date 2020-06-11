@@ -1,12 +1,13 @@
 /*--------------------------------------------------------
 Server code for Evaluate News NLP. UDACITY Project - Front End Developper Nanodegree
-version: 0.0.1
+version: 1.0.0
 created on: 02/06/20
-last modified: 02/06/20
+last modified: 11/06/20
 Updates:
 02/06/20    File Creation
 02/06/20    Configuration Server
 02/06/20    Set API
+11/05/20    Correction after review
 author: E. RONDON
 ----------------------------------------------------------*/
 var path = require('path')
@@ -19,6 +20,10 @@ const dotenv = require('dotenv');
 const port = 8000;
 let appClassifyCacheData = {};
 let appSentimentCacheData = {};
+let internalServerError = {
+  code: 500,
+  message: 'Internal Server Error'
+}
 
 // Start up an instance of app
 const app = express();
@@ -76,7 +81,9 @@ function getClassifyRouteCallback(request, response) {
         'url': request.query.url, //'http://techcrunch.com/2015/07/16/microsoft-will-never-give-up-on-mobile'
         'language': 'en'
       }, function(error, res) {
-        if (error === null) {
+        if (error) {
+          res.status(500).send(internalServerError);
+        }else{
           appClassifyCacheData[request.query.url] = res;
           response.send(res);
         }
@@ -100,7 +107,9 @@ function getSentimentRouteCallback(request, response) {
       'url': request.query.url, //'http://techcrunch.com/2015/07/16/microsoft-will-never-give-up-on-mobile'
       'language': 'en'
     }, function(error, res) {
-      if (error === null) {
+      if (error) {
+        res.status(500).send(internalServerError);
+      }else{
         appSentimentCacheData[request.query.url] = res;
         response.send(res);
       }

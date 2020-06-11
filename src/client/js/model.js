@@ -1,6 +1,6 @@
 /*--------------------------------------------------------
 Model code for the App. UDACITY Project - Front End Developper Nanodegree
-version: 0.0.1
+version: 1.0.0
 created on: 07/06/20
 last modified: 07/06/20
 Updates:
